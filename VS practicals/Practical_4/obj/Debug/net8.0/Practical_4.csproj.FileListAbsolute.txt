@@ -1,0 +1,14 @@
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.AssemblyInfoInputs.cache
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.AssemblyInfo.cs
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.csproj.CoreCompileInputs.cache
+E:\SEM-5\.NET\VS practicals\Practical_4\bin\Debug\net8.0\Practical_4.exe
+E:\SEM-5\.NET\VS practicals\Practical_4\bin\Debug\net8.0\Practical_4.deps.json
+E:\SEM-5\.NET\VS practicals\Practical_4\bin\Debug\net8.0\Practical_4.runtimeconfig.json
+E:\SEM-5\.NET\VS practicals\Practical_4\bin\Debug\net8.0\Practical_4.dll
+E:\SEM-5\.NET\VS practicals\Practical_4\bin\Debug\net8.0\Practical_4.pdb
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.dll
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\refint\Practical_4.dll
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.pdb
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\Practical_4.genruntimeconfig.cache
+E:\SEM-5\.NET\VS practicals\Practical_4\obj\Debug\net8.0\ref\Practical_4.dll

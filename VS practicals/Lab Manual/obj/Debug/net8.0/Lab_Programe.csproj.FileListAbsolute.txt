@@ -1,0 +1,28 @@
+E:\SEM-5\.NET\VS practicals\Lab1\bin\Debug\net8.0\Lab_Programe.exe
+E:\SEM-5\.NET\VS practicals\Lab1\bin\Debug\net8.0\Lab_Programe.deps.json
+E:\SEM-5\.NET\VS practicals\Lab1\bin\Debug\net8.0\Lab_Programe.runtimeconfig.json
+E:\SEM-5\.NET\VS practicals\Lab1\bin\Debug\net8.0\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab1\bin\Debug\net8.0\Lab_Programe.pdb
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.AssemblyInfoInputs.cache
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.AssemblyInfo.cs
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.csproj.CoreCompileInputs.cache
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\refint\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.pdb
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\Lab_Programe.genruntimeconfig.cache
+E:\SEM-5\.NET\VS practicals\Lab1\obj\Debug\net8.0\ref\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab Manual\bin\Debug\net8.0\Lab_Programe.exe
+E:\SEM-5\.NET\VS practicals\Lab Manual\bin\Debug\net8.0\Lab_Programe.deps.json
+E:\SEM-5\.NET\VS practicals\Lab Manual\bin\Debug\net8.0\Lab_Programe.runtimeconfig.json
+E:\SEM-5\.NET\VS practicals\Lab Manual\bin\Debug\net8.0\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab Manual\bin\Debug\net8.0\Lab_Programe.pdb
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.AssemblyInfoInputs.cache
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.AssemblyInfo.cs
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.csproj.CoreCompileInputs.cache
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\refint\Lab_Programe.dll
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.pdb
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\Lab_Programe.genruntimeconfig.cache
+E:\SEM-5\.NET\VS practicals\Lab Manual\obj\Debug\net8.0\ref\Lab_Programe.dll
