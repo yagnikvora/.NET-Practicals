@@ -1,0 +1,51 @@
+﻿@using System.Data
+@model DataTable
+@{
+    Layout = "_Layout";
+}
+<h2>Products List</h2>
+<hr />
+<a class="btn btn-info" asp-area="COF_Product" asp-controller="Product" asp-action="AddEditProduct">ADD PRODUCT</a>
+<table class="table text-center" >
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>ProductName</th>
+            <th>ProductPrice</th>
+            <th>ProductCode</th>
+            <th>Description</th>
+            <th>UserID</th>
+            <th colspan="2" >Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (DataRow product in Model.Rows)
+            {
+                <tr>
+                    <td>@product["ProductID"]</td>
+                    <td>@product["ProductName"]</td>
+                    <td>@product["ProductPrice"]</td>
+                    <td>@product["ProductCode"]</td>
+                    <td>@product["Description"]</td>
+                    <td>@product["UserID"]</td>
+                    <td>
+                        <a asp-area="COF_Product" asp-controller="Product" asp-action="AddEditProduct" asp-route-id = "@product["ProductID"]">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="bx bx-edit"></i>
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <form method="post" asp-area="COF_Product" asp-controller="Product" asp-action="ProductDelete">
+                            <input type="hidden" name="ProductID" value="@product["ProductID"]" />
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bx bxs-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
