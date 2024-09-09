@@ -15,7 +15,7 @@ namespace AreaCrud.Areas.COF_Product.Models
         public decimal ProductPrice { get; set; }
 
         [Required(ErrorMessage = "Product Code is required")]
-        [StringLength(100, ErrorMessage = "Product Code cannot be longer than 100 characters")]
+        [StringLength(20, ErrorMessage = "Product Code cannot be longer than 20 characters")]
         public string ProductCode { get; set; }
 
         [Required(ErrorMessage = "Description is required")]

@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|solutionrelative:areas\\cof_product\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|e:\\sem-5\\dotnet\\web applications\\areacrud\\areas\\cof_product\\views\\product\\addeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|solutionrelative:areas\\cof_product\\views\\product\\addeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|e:\\sem-5\\dotnet\\web applications\\areacrud\\areas\\cof_product\\views\\product\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|solutionrelative:areas\\cof_product\\views\\product\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|e:\\sem-5\\dotnet\\web applications\\areacrud\\areas\\cof_product\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|solutionrelative:areas\\cof_product\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|e:\\sem-5\\dotnet\\web applications\\areacrud\\areas\\cof_product\\views\\product\\addeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA7E2DF-0033-4738-AC28-D3B2F285FB9E}|AreaCrud.csproj|solutionrelative:areas\\cof_product\\views\\product\\addeditproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddEditProduct.cshtml",
-              "DocumentMoniker": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
-              "RelativeDocumentMoniker": "Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
-              "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
-              "RelativeToolTip": "Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T05:47:58.126Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -45,9 +36,35 @@
               "RelativeDocumentMoniker": "Areas\\COF_Product\\Models\\ProductModel.cs",
               "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Models\\ProductModel.cs",
               "RelativeToolTip": "Areas\\COF_Product\\Models\\ProductModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwB8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T05:38:42.492Z",
+              "WhenOpened": "2024-09-09T17:17:24.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductList.cshtml",
+              "DocumentMoniker": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\ProductList.cshtml",
+              "RelativeDocumentMoniker": "Areas\\COF_Product\\Views\\Product\\ProductList.cshtml",
+              "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\ProductList.cshtml",
+              "RelativeToolTip": "Areas\\COF_Product\\Views\\Product\\ProductList.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T12:06:27.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddEditProduct.cshtml",
+              "DocumentMoniker": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
+              "RelativeDocumentMoniker": "Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
+              "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
+              "RelativeToolTip": "Areas\\COF_Product\\Views\\Product\\AddEditProduct.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T12:03:40.331Z",
               "EditorCaption": ""
             },
             {
@@ -56,9 +73,9 @@
               "Title": "ProductController.cs",
               "DocumentMoniker": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Areas\\COF_Product\\Controllers\\ProductController.cs",
-              "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Controllers\\ProductController.cs*",
-              "RelativeToolTip": "Areas\\COF_Product\\Controllers\\ProductController.cs*",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAiwGIAAAARAAAA",
+              "ToolTip": "E:\\SEM-5\\DOTNET\\Web Applications\\AreaCrud\\Areas\\COF_Product\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Areas\\COF_Product\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAANAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T18:43:28.781Z",
               "EditorCaption": ""

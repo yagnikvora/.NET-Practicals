@@ -6,6 +6,8 @@
 <h2>Products List</h2>
 <hr />
 <a class="btn btn-info" asp-area="COF_Product" asp-controller="Product" asp-action="AddEditProduct">ADD PRODUCT</a>
+<a class="btn btn-success" asp-area="COF_Product" asp-controller="Product" asp-action="ExportToExcel">Excel File</a>
+
 <table class="table text-center" >
     <thead>
         <tr>
@@ -39,7 +41,7 @@
                     <td>
                         <form method="post" asp-area="COF_Product" asp-controller="Product" asp-action="ProductDelete">
                             <input type="hidden" name="ProductID" value="@product["ProductID"]" />
-                            <button type="submit" class="btn btn-danger">
+                            <button onclick=" return confirm('Sure!! Are you want to delete @product["ProductName"]')" type="submit" class="btn btn-danger">
                                 <i class="bx bxs-trash"></i>
                             </button>
                         </form>

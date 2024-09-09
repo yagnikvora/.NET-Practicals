@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using System.Data.SqlClient;
 using AreaCrud.Areas.COF_Product.Models;
 
@@ -33,7 +35,7 @@ namespace AreaCrud.Areas.COF_Product.Controllers
         }
         #endregion
 
-        #region add edit product
+        #region check for add or edit
         public IActionResult AddEditProduct(int? id)
         {
             string connectionString = this._configuration.GetConnectionString("myConnectionString");
@@ -54,7 +56,7 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                 userList.Add(userDropDownModel);
             }
             ViewBag.UserList = userList;
-            if (id> 0)
+            if (id != null)
             {
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
@@ -66,7 +68,7 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                 DataTable table = new DataTable();
                 table.Load(reader);
                 ProductModel data = new ProductModel();
-                foreach(DataRow dr in table.Rows)
+                foreach (DataRow dr in table.Rows)
                 {
                     data.ProductID = Convert.ToInt32(@dr["ProductID"]);
                     data.ProductName = @dr["ProductName"].ToString();
@@ -75,7 +77,6 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                     data.Description = @dr["Description"].ToString();
                     data.UserID = Convert.ToInt32(@dr["UserID"]);
                 }
-                
                 return View(data);
             }
             else
@@ -83,11 +84,15 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                 return View();
             }
         }
-        [HttpPost]
+
+        #endregion
+
         #region Save Product
+        [HttpPost]
         public IActionResult SaveProduct(ProductModel pm)
         {
-            try
+            ModelState.Remove("ProductID");
+            if (ModelState.IsValid)
             {
                 string connectionString = this._configuration.GetConnectionString("myConnectionString");
                 SqlConnection connection1 = new SqlConnection(connectionString);
@@ -100,24 +105,19 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                     command.CommandText = "PR_Product_UpdateByPk";
                     command.Parameters.Add("@ProductID", SqlDbType.Int).Value = pm.ProductID;
                 }
-                command.Parameters.Add("@ProductName", SqlDbType.NVarChar).Value = pm.ProductName;
-                command.Parameters.Add("@ProductPrice", SqlDbType.Decimal).Value = pm.ProductPrice;
-                command.Parameters.Add("@ProductCode", SqlDbType.NVarChar).Value = pm.ProductCode;
-                command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = pm.Description;
-                command.Parameters.Add("@UserID", SqlDbType.Int).Value = pm.UserID;
-
+                command.Parameters.AddWithValue("ProductName", pm.ProductName);
+                command.Parameters.AddWithValue("ProductPrice", pm.ProductPrice);
+                command.Parameters.AddWithValue("ProductCode", pm.ProductCode);
+                command.Parameters.AddWithValue("Description", pm.Description);
+                command.Parameters.AddWithValue("UserID", pm.UserID);
                 command.ExecuteNonQuery();
                 return RedirectToAction("ProductList");
-            } catch(Exception ex)
-            {
-                TempData["ErrorMessage"] = ex.Message;
-                Console.WriteLine(ex.ToString());
-                return RedirectToAction("ProductList");
             }
-            
+            else
+            {
+                return RedirectToAction("AddEditProduct");
+            }
         }
-        #endregion
-
         #endregion
 
         #region delete Product
@@ -140,6 +140,69 @@ namespace AreaCrud.Areas.COF_Product.Controllers
                 TempData["ErrorMessage"] = ex.Message;
                 Console.WriteLine(ex.ToString());
                 return RedirectToAction("ProductList");
+            }
+        }
+        #endregion
+
+        #region Export to Excel
+        [HttpGet]
+        public IActionResult ExportToExcel()
+        {
+            string connectionString = _configuration.GetConnectionString("myConnectionString");
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "PR_Product_SelectAll";
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+
+            // Generate Excel file
+            using (var package = new ExcelPackage())
+            {
+                // Create a worksheet
+                var worksheet = package.Workbook.Worksheets.Add("Products");
+
+                // Set column headings
+                worksheet.Cells[1, 1].Value = "Product ID";
+                worksheet.Cells[1, 2].Value = "Product Name";
+                worksheet.Cells[1, 3].Value = "Product Price";
+                worksheet.Cells[1, 4].Value = "Product Code";
+                worksheet.Cells[1, 5].Value = "Description";
+                worksheet.Cells[1, 6].Value = "User ID";
+
+                // Make the header row bold
+                using (var range = worksheet.Cells[1, 1, 1, 6])
+                {
+                    range.Style.Font.Bold = true;
+                    range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                }
+                int i = 0;
+                // Add product data
+                foreach (DataRow product in table.Rows)
+                {
+                    worksheet.Cells[i + 2, 1].Value = product["ProductID"];
+                    worksheet.Cells[i + 2, 2].Value = product["ProductName"];
+                    worksheet.Cells[i + 2, 3].Value = product["ProductPrice"];
+                    worksheet.Cells[i + 2, 4].Value = product["ProductCode"];
+                    worksheet.Cells[i + 2, 5].Value = product["Description"];
+                    worksheet.Cells[i + 2, 6].Value = product["UserID"];
+                    i++;
+                }
+
+                // AutoFit columns
+                worksheet.Cells.AutoFitColumns();
+
+                // Set file format and content
+                var stream = new MemoryStream();
+                package.SaveAs(stream);
+                stream.Position = 0;
+
+                var fileName = "ProductData.xlsx";
+                var contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+                return File(stream, contentType, fileName);
             }
         }
         #endregion

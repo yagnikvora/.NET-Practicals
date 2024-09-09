@@ -2,7 +2,7 @@
 @{
     Layout = "_Layout";
 } 
-<h1>Edit Product</h1>
+<h1>@((Model?.ProductID > 0) ? "Edit" : "Add") Product</h1>
 <form asp-controller="Product" asp-action="SaveProduct" method="post">
     @Html.HiddenFor(m => m.ProductID)
     <div class="form-group row my-2">
@@ -32,16 +32,8 @@
         </select>
         <span asp-validation-for="UserID" class="text-danger"></span>
     </div>
-    @{
-        if (Model?.ProductID > 0)
-        {
-            <button type="submit" class="btn btn-success">Edit</button>
-        }
-        else
-        {
-            <button type="submit" class="btn btn-primary">Add</button>
-        }
-    }
+    <button type="submit" class=" btn @((Model?.ProductID > 0) ?  "btn-success" :  "btn-primary")">@((Model?.ProductID > 0) ? "Edit" : "Add")</button>
+
 </form>
 
 
